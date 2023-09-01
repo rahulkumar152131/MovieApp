@@ -45,10 +45,13 @@ const Header = () => {
 
     if (event.key === "Enter" && query.length > 0) {
       navigate(`/search/${query}`);
+
+
+      setTimeout(() => {
+        setShowSearch(false);
+      }, 500);
     }
-    setTimeout(() => {
-      setShowSearch(false);
-    }, 5000);
+
   }
 
   const openSearch = () => {
